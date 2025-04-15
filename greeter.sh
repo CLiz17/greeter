@@ -17,5 +17,12 @@ else
     greeting="Nighty Night"
 fi
 
-echo "Hey $user! $greeting"
-echo "It's $time, time to get started!"
+quotes=("You're exactly where you need to be right now." "You’re capable of hard things — and this is just one of them." "Breathe. Reset. Go again." "You’re doing better than you think." "Small steps still move you forward." "You’ve come so far. Don’t forget that." "The fact that you care means you’re already winning." "Some days are slow — but not pointless." "You've handled worse. You got this too." "Your effort matters. It’s building up." "It’s okay to pause, but don’t quit." "You are growing in ways you can’t yet see." "This isn't pressure. It's potential." "Keep showing up. Magic’s brewing." "Today is another chance to try again — and that’s powerful.")
+random_quote=$((RANDOM % ${#quotes[@]}))
+
+emojis=(☀️  🌈 🌻 🍀 💛 🤗 🧡 ✨ ☕ 💪 🔥 🚀 🎯 ⚡ 💖 🌸 🦋 💫 🍂 🐝 🌟)
+random_emoji=$((RANDOM % ${#emojis[@]}))
+
+echo "Hey $user! $greeting ${emojis[$random_emoji]}"
+echo "It's $time, That's the time to get started!"
+echo "${quotes[$random_quote]}"
